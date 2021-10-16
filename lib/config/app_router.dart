@@ -1,3 +1,4 @@
+import 'package:easy_shop/models/models.dart';
 import 'package:easy_shop/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -16,9 +17,9 @@ class AppRouter {
       case WishlistScreen.routeName:
         return WishlistScreen.route();
       case ProductScreen.routeName:
-        return ProductScreen.route();
+        return ProductScreen.route(product: settings.arguments as Product);
       case CatalogScreen.routeName:
-        return CatalogScreen.route();
+        return CatalogScreen.route(category: settings.arguments as Category);
 
       default:
         return _errorRoute();

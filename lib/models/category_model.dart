@@ -12,7 +12,7 @@ class Category extends Equatable {
 
   static List<Category> categories = [
     Category(
-      name: 'Soft Drink',
+      name: 'Soft Drinks',
       imageUrl:
           'https://images.unsplash.com/photo-1527960471264-932f39eb5846?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80',
     ),
