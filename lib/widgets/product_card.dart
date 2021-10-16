@@ -4,8 +4,13 @@ import 'package:flutter/material.dart';
 class ProductCard extends StatelessWidget {
   final Product product;
   final widthFactor;
+  final bool isWhishlist;
 
-  const ProductCard({Key? key, required this.product, this.widthFactor = 2.5})
+  const ProductCard(
+      {Key? key,
+      required this.product,
+      this.widthFactor = 2.5,
+      this.isWhishlist = false})
       : super(key: key);
 
   @override
@@ -65,7 +70,17 @@ class ProductCard extends StatelessWidget {
                           color: Colors.white,
                         ),
                         onPressed: () {}),
-                  )
+                  ),
+                  isWhishlist
+                      ? Expanded(
+                          child: IconButton(
+                              icon: Icon(
+                                Icons.delete,
+                                color: Colors.white,
+                              ),
+                              onPressed: () {}),
+                        )
+                      : SizedBox()
                 ],
               ),
             ),
